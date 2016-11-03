@@ -38,5 +38,11 @@ _intensity_ = number between 0 and 1 (higher the number = less delay)
 
 ## Bouncing/Waving Text
 __DrawBouncingText( style, intesity, text, font, x, y, color, xalign, yalign )__ <br / >
-_style_ = 1 bounce up 2 bounce down 3 waving<br / >
+_style_ = (1) bounce up (2) bounce down (3) waving<br / >
 _intensity_ = intensity of the wave (1-3 is usually good)
+
+
+## Sparkling/Snowing Text
+__DrawSnowingText( intensity, text, font, x, y, color, sparkle_color, xalign, yalign )__ <br / >
+_intensity_ = How many sparkles there should be<br / >
+_sparkle_color_ = Color of the sparkles (Default white)
