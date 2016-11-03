@@ -203,11 +203,11 @@ function DrawBouncingText( style, intesity, text, font, x, y, color, xalign, yal
 
 end
 
-local next_electic_effect = CurTime() + 0
+local next_electric_effect = CurTime() + 0
 
 local electric_effect_a = 0
 
-function DrawElecticText( intensity, text, font, x, y, color, xalign, yalign )
+function DrawElectricText( intensity, text, font, x, y, color, xalign, yalign )
 
 	local xalign = xalign or TEXT_ALIGN_LEFT
 	
@@ -243,9 +243,9 @@ function DrawElecticText( intensity, text, font, x, y, color, xalign, yalign )
 
 	local effect_max = 1.5 + ( 1 - intensity )
 
-	if ( next_electic_effect <= CurTime() ) then
+	if ( next_electric_effect <= CurTime() ) then
 
-		next_electic_effect = CurTime() + math.Rand( effect_min, effect_max )
+		next_electric_effect = CurTime() + math.Rand( effect_min, effect_max )
 		
 		electric_effect_a = 255
 
@@ -359,7 +359,7 @@ function moat_DrawEffectExamples()
 
 	y = y + 50
 
-	DrawElecticText( 1, "ELECTRIC TEXT", font, x, y, Color( 255, 0, 0 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
+	DrawElectricText( 1, "ELECTRIC TEXT", font, x, y, Color( 255, 0, 0 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
 
 	y = y + 50
 
