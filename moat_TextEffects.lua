@@ -59,7 +59,7 @@ function GlowColor( col1, col2, mod )
 end
 
 
-function DrawEnchantedText( text, font, x, y, color, glow_color, xalign, yalign )
+function DrawEnchantedText( speed, text, font, x, y, color, glow_color, xalign, yalign )
 
 	local xalign = xalign or TEXT_ALIGN_LEFT
 
@@ -81,7 +81,7 @@ function DrawEnchantedText( text, font, x, y, color, glow_color, xalign, yalign 
 
 		local charw, charh = surface.GetTextSize( char )
 
-		local color_glowing = GlowColor( glow_color, color, math.abs( math.sin( ( RealTime() - ( i * 0.08 ) ) * 2 ) ) )
+		local color_glowing = GlowColor( glow_color, color, math.abs( math.sin( ( RealTime() - ( i * 0.08 ) ) * speed ) ) )
 
 		draw.SimpleText( char, font, x + chars_x, y, color_glowing, xalign, yalign )
 
@@ -207,7 +207,7 @@ local next_electic_effect = CurTime() + 0
 
 local electric_effect_a = 0
 
-function m_DrawElecticText( text, font, x, y, color, xalign, yalign, intensity )
+function DrawElecticText( intensity, text, font, x, y, color, xalign, yalign )
 
 	local xalign = xalign or TEXT_ALIGN_LEFT
 	
@@ -296,11 +296,13 @@ function DrawFireText( intensity, text, font, x, y, color, xalign, yalign, glow,
 
 end
 
-function DrawSnowingText( intensity, text, font, x, y, color, xalign, yalign )
+function DrawSnowingText( intensity, text, font, x, y, color, color2, xalign, yalign )
 
 	local xalign = xalign or TEXT_ALIGN_LEFT
 	
 	local yalign = yalign or TEXT_ALIGN_TOP
+
+	local color2 = color2 or Color( 255, 255, 255 )
 
 	draw.SimpleText( text, font, x, y, color, xalign, yalign )
 
@@ -308,15 +310,13 @@ function DrawSnowingText( intensity, text, font, x, y, color, xalign, yalign )
 
 	local textw, texth = surface.GetTextSize( text )
 
-	surface.SetDrawColor( 255, 255, 255, 255 )
+	surface.SetDrawColor( color2.r, color2.g, color2.b, 255 )
 
 	for i = 1, intensity do
 		
 		local line_y = math.random( 0, texth )
 
 		local line_x = math.random( 0, textw )
-
-		surface.SetDrawColor( 255, 255, 255, 255 )
 
 		surface.DrawLine( x + line_x, y + line_y, x + line_x, y + line_y + 1 )
 
@@ -325,7 +325,7 @@ function DrawSnowingText( intensity, text, font, x, y, color, xalign, yalign )
 end
 
 
-local MOAT_SHOW_EFFECT_EXAMPLES = false
+local MOAT_SHOW_EFFECT_EXAMPLES = true
 
 function moat_DrawEffectExamples()
 
@@ -351,7 +351,7 @@ function moat_DrawEffectExamples()
 
 	y = y + 50
 
-	DrawEnchantedText( "ENCHANTED TEXT", font, x, y, Color( 255, 0, 0 ), Color( 0, 0, 255 ) )
+	DrawEnchantedText( 2, "ENCHANTED TEXT", font, x, y, Color( 255, 0, 0 ), Color( 0, 0, 255 ) )
 
 	y = y + 50
 
@@ -359,7 +359,7 @@ function moat_DrawEffectExamples()
 
 	y = y + 50
 
-	m_DrawElecticText( "ELECTRIC TEXT", font, x, y, Color( 255, 0, 0 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP, 1 )
+	DrawElecticText( 1, "ELECTRIC TEXT", font, x, y, Color( 255, 0, 0 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
 
 	y = y + 50
 
@@ -367,7 +367,7 @@ function moat_DrawEffectExamples()
 
 	y = y + 50
 
-	DrawSnowingText( 10, "SPARKLING/SNOWING TEXT", font, x, y, Color( 255, 0, 0 ) )
+	DrawSnowingText( 10, "SPARKLING/SNOWING TEXT", font, x, y, Color( 255, 0, 0 ), Color( 255, 255, 255 ) )
 
 end
 
