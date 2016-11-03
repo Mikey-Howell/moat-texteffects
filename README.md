@@ -3,7 +3,7 @@ Cool text effects for Garry's Mod :D
 
 ##[Video of effects can be seen here](http://moatgaming.net/texteffects.mp4)
 [Examples can be seen here](https://github.com/moat7/moat-texteffects/blob/master/moat_TextEffects.lua#L342-L370)<br / >
-You can also type moat_TextEffects to see all of the effects in game :D
+You can also type in console moat_TextEffects to see all of the effects in game :D
 
 ## Glowing Text
 __DrawGlowingText( static, text, font, x, y, color, xalign, yalign )__ <br / >
