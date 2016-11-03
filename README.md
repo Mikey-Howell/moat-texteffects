@@ -35,7 +35,7 @@ _shadow_ = should there be a shadow between the text and the fire?
 
 
 ## Electric Text
-__m_DrawElecticText( intensity, text, font, x, y, color, xalign, yalign )__ <br / >
+__DrawElecticText( intensity, text, font, x, y, color, xalign, yalign )__ <br / >
 _intensity_ = number between 0 and 1 (higher the number = less delay)
 
 
