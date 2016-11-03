@@ -1,6 +1,7 @@
 # moat-texteffects
 Cool text effects for Garry's Mod :D
 
+[VIDEO OF EFFECTS CAN BE SEEN HERE](http://moatgaming.net/texteffects.mp4)
 
 ## Glowing Text
 __DrawGlowingText( static, text, font, x, y, color, xalign, yalign )__ <br / >
