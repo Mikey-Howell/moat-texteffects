@@ -20,6 +20,6 @@ _speed_ = speed at which the rainbow transitions to a new color (1 - 100)
 
 ## Rainbow Text
 __DrawEnchantedText( speed, text, font, x, y, color, glow_color, xalign, yalign )__ <br / >
-_speed_ = speed at which the transitions happen (2 is good)
+_speed_ = speed at which the transitions happen (2 is good)<br / >
 _glow_color_ = the other color to transition through
 
