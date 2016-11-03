@@ -29,3 +29,14 @@ __DrawFireText( intensity, text, font, x, y, color, xalign, yalign, glow, shadow
 _intensity_ = number between 0 and 1 (0.5 is half of the text height)<br / >
 _glow_ = should the text glow?<br / >
 _shadow_ = should there be a shadow between the text and the fire?
+
+
+## Electric Text
+__m_DrawElecticText( intensity, text, font, x, y, color, xalign, yalign )__ <br / >
+_intensity_ = number between 0 and 1 (higher the number = less delay)
+
+
+## Bouncing/Waving Text
+__DrawBouncingText( style, intesity, text, font, x, y, color, xalign, yalign )__ <br / >
+_style_ = 1 bounce up 2 bounce down 3 waving<br / >
+_intensity_ = intensity of the wave (1-3 is usually good)
