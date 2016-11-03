@@ -23,3 +23,9 @@ __DrawEnchantedText( speed, text, font, x, y, color, glow_color, xalign, yalign 
 _speed_ = speed at which the transitions happen (2 is good)<br / >
 _glow_color_ = the other color to transition through
 
+
+## Inferno Text
+__DrawFireText( intensity, text, font, x, y, color, xalign, yalign, glow, shadow )__ <br / >
+_intensity_ = number between 0 and 1 (0.5 is half of the text height)<br / >
+_glow_ = should the text glow?<br / >
+_shadow_ = should there be a shadow between the text and the fire?
