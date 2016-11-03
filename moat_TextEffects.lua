@@ -325,7 +325,7 @@ function DrawSnowingText( intensity, text, font, x, y, color, color2, xalign, ya
 end
 
 
-local MOAT_SHOW_EFFECT_EXAMPLES = true
+local MOAT_SHOW_EFFECT_EXAMPLES = false
 
 function moat_DrawEffectExamples()
 
