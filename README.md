@@ -1,5 +1,5 @@
 # moat-texteffects
-Cool text effects for Garry's Mod
+Cool text effects for Garry's Mod :D
 
 
 ## Glowing Text
